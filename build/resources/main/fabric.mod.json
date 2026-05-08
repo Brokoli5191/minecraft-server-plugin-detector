@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "server-plugin-detector",
+  "version": "1.0.0",
+  "name": "Server Plugin Detector",
+  "description": "Passively detects likely server plugins from command namespaces and known command aliases.",
+  "icon": "assets/server-plugin-detector/icon.png",
+  "authors": [
+    "Brokoli5191"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.brokoli5191.plugindetector.PluginDetectorClient"
+    ],
+    "modmenu": [
+      "com.brokoli5191.plugindetector.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "server_plugin_detector.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "minecraft": "26.1.2",
+    "java": ">=25"
+  },
+  "suggests": {
+    "modmenu": ">=18.0.0-alpha.8"
+  }
+}
